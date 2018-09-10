@@ -3,6 +3,7 @@ define('CLASS_PATH', dirname(__FILE__).'/classes/');
 define('FRONT', dirname(__FILE__).'/front/');
 define('ASSETS', dirname(__FILE__).'/assets/');
 include CLASS_PATH.'class_cashmachine.php';
+session_start();
 //var
 //Array of notes and coin values:
 //let's set everything to 10
@@ -28,4 +29,4 @@ $Cashmachine = new cashmachine($_SESSION['cashmachine']);
 
 $displayResults = isset($_SESSION['result']) ? 'block': 'none';
 $results = isset($_SESSION['result']) ? '<tr>'.$_SESSION['result'].'</tr>': '';
-print_r($_SESSION);
+//print_r($_SESSION);
