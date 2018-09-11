@@ -43,14 +43,18 @@ class cashmachine{	private $currentCash = array();
 		//need to start with higest values
 		arsort($keys);
 		//print_r($keys);
-		$results = '';
+		$results = "";
 		foreach($keys  as  $value){
-			$qty = $amount  / $value;
+			$qty = floor( $amount  / $value);
+          //  echo "**$value $qty*";
 			if($qty >= 1){
 				$amount =  $amount - ($qty * $value);
-			}
-			$results = '<td>'.$qty.'</td>';
+			} else {
+                $qty = 0;
+            }
+			$results .= "<td>$qty</td>";
+            echo "*[ $results ]*";
 		}
-		
+
 		return $results;
 	}}

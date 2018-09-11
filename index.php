@@ -21,10 +21,11 @@ include FRONT.'head.php';
 	<input type="submit">
 </form>
 <div style="display:<?php echo $displayResults;?>">
- <table>
-	<tr><th>10.000</th><th>5.000</th><th>1.000</th><th>500</th><th>100</th><th>50</th><th>10</th><th>1</th></tr>
+<p>Withdrawal is:<?php echo $withdraw;?></p>
+ <table class="fullwidth">
+	<tr><th>10.000</th><th>5.000</th><th>1.000</th><th>500</th><th>100</th><th>50</th><th>10</th><th>5</th><th>1</th></tr>
  <?php echo $results;?></table>
 </div>
 <?php
-include FRONT.'head.php';
+include FRONT.'footer.php';
 

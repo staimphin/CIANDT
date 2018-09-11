@@ -1,0 +1,23 @@
+
+body {
+	font-size: 16px;
+	line-height: 1.5;
+	padding:2.5em;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th, td {
+	border: black 1px solid;
+}
+
+
+.fullwidth {
+   width:100%;
+}
+.fullwidth td {
+   width:11%;
+   text-align: center;
+}

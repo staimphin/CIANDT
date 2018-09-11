@@ -15,7 +15,8 @@ include 'settings.php';
 
 if(isset($_POST['withdraw'])){
 	$withdraw = intval($_POST['withdraw']);
-	 $_SESSION['result'] =$Cashmachine->withdraw($withdraw);
+    $_SESSION['withdraw'] = $withdraw;
+    $_SESSION['result'] =$Cashmachine->withdraw($withdraw);
 }
 
 

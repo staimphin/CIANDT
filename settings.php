@@ -1,7 +1,9 @@
 <?php
 define('CLASS_PATH', dirname(__FILE__).'/classes/');
 define('FRONT', dirname(__FILE__).'/front/');
-define('ASSETS', dirname(__FILE__).'/assets/');
+define('PROJECT','ciandt/');
+define('BASE_URI', (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 'https' :'http').'://'. $_SERVER['HTTP_HOST'].'/'.PROJECT);
+define('ASSETS', BASE_URI.'/assets/');
 include CLASS_PATH.'class_cashmachine.php';
 session_start();
 //var
@@ -29,4 +31,6 @@ $Cashmachine = new cashmachine($_SESSION['cashmachine']);
 
 $displayResults = isset($_SESSION['result']) ? 'block': 'none';
 $results = isset($_SESSION['result']) ? '<tr>'.$_SESSION['result'].'</tr>': '';
-//print_r($_SESSION);
+
+
+$withdraw = isset( $_SESSION['withdraw']) ? $_SESSION['withdraw'] : 0;
